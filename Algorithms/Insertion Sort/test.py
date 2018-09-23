@@ -5,6 +5,7 @@ import unittest
 class FibTest(unittest.TestCase):
     # FibTest is inheriting from class unittest.TestCase
     
+    # normal array
     arr1 = [3, 6, 4, 1, 9, 5]
     sortedArr1 = Implementation.iSort(arr1)
     expctArr1 = [1, 3, 4, 5, 6, 9]
@@ -14,10 +15,12 @@ class FibTest(unittest.TestCase):
     sortedArr2 = Implementation.iSort(arr2)
     expctArr2 = [1, 3, 3, 4, 4, 6, 9]
     
+    # zeroes and ones
     arr3 = [0, 1, 0, 1, 0, 1, 0]
     sortedArr3 = Implementation.iSort(arr3)
     expctArr3 = [0, 0, 0, 0, 1, 1, 1]
     
+    # 2 elements
     arr4 = [1,0]
     sortedArr4 = Implementation.iSort(arr4)
     expctArr4 = [0,1]
