@@ -1,0 +1,34 @@
+Array => A[1:n]
+l => lower index
+h => higher index
+m => mid index
+
+mSort(A, l, h)
+    if(l < h)
+        m = integer(l + (h-l)/2)
+        L = mSort = (A, l, m)
+        R = mSort = (A, m+1, h)
+        result = merge(L, m, R, h)
+        return result
+    else 
+        return A[l] // It will return the moment l == h and prevent l > h case, Hence return A[l] == A[h] when l == h 
+    
+merge(L, m, R, h)
+    L[m+1] = infinity
+    R[h+1] = infinity
+    //If you dont want to use infinity as sentinel, then just find the largest element in the array and add one to it
+    i = 0, j = 0, k = 0, result = []
+    
+    while L[i] != infinity or R[j] != infinity
+        if L[i] <= R [j]
+            result[k] = L[i]
+            i++
+            k++
+        else
+            result[k] = R[j]
+            j++
+            k++
+    return result
+        
+    
+    
