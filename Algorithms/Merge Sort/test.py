@@ -37,6 +37,11 @@ class FibTest(unittest.TestCase):
     sortedArr7 = Implementation.mSort(arr7)
     expctArr7 = [1,2,3,4]
     
+    # Negative elements
+    arr8 = [-4, 3, -12, 1, 0]
+    sortedArr8 = Implementation.mSort(arr8)
+    expctArr8 = [-12, -4, 0, 1 , 3]
+    
     # The test cases are defined in this class by using methods
     # name of these methods is arbitrary, but has to start with test
     def testCases(self):
@@ -47,6 +52,7 @@ class FibTest(unittest.TestCase):
         self.assertEqual(isArrEq(self.sortedArr5,self.expctArr5), True)
         self.assertEqual(isArrEq(self.sortedArr6,self.expctArr6), True)
         self.assertEqual(isArrEq(self.sortedArr7,self.expctArr7), True)
+        self.assertEqual(isArrEq(self.sortedArr8,self.expctArr8), True)
         
 def isArrEq(sortedArr,expctArr):
     for i in range(len(expctArr)):

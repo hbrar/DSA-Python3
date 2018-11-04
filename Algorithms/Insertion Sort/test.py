@@ -5,12 +5,12 @@ import unittest
 class FibTest(unittest.TestCase):
     # FibTest is inheriting from class unittest.TestCase
     
-    # normal array
+    # Normal array
     arr1 = [3, 6, 4, 1, 9, 5]
     sortedArr1 = Implementation.iSort(arr1)
     expctArr1 = [1, 3, 4, 5, 6, 9]
     
-    # duplicates
+    # Duplicates
     arr2 = [3, 6, 4, 1, 4, 9, 3]
     sortedArr2 = Implementation.iSort(arr2)
     expctArr2 = [1, 3, 3, 4, 4, 6, 9]
@@ -25,20 +25,25 @@ class FibTest(unittest.TestCase):
     sortedArr4 = Implementation.iSort(arr4)
     expctArr4 = [0,1]
     
-    # one element
+    # One element
     arr5 = [0]
     sortedArr5 = Implementation.iSort(arr5)
     expctArr5 = [0]
     
-    # empty array
+    # Empty array
     arr6 = []
     sortedArr6 = Implementation.iSort(arr6)
     expctArr6 = []
     
-    # reverse array
-    arr7 = [4,3,2,1]
+    # Reverse array
+    arr7 = [4, 3, 2, 1]
     sortedArr7 = Implementation.iSort(arr7)
-    expctArr7 = [1,2,3,4]
+    expctArr7 = [1, 2, 3, 4]
+    
+    # Negative elements
+    arr8 = [-4, 3, -12, 1, 0]
+    sortedArr8 = Implementation.iSort(arr8)
+    expctArr8 = [-12, -4, 0, 1 , 3]
     
     # The test cases are defined in this class by using methods
     # name of these methods is arbitrary, but has to start with test
@@ -50,6 +55,7 @@ class FibTest(unittest.TestCase):
         self.assertEqual(isArrEq(self.sortedArr5,self.expctArr5), True)
         self.assertEqual(isArrEq(self.sortedArr6,self.expctArr6), True)
         self.assertEqual(isArrEq(self.sortedArr7,self.expctArr7), True)
+        self.assertEqual(isArrEq(self.sortedArr8,self.expctArr8), True)
         
 def isArrEq(sortedArr,expctArr):
     for i in range(len(expctArr)):
